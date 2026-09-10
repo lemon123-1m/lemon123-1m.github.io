@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#ffffff" />
+    <title>Yi Meng | Portfolio</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23f6f1e8'/%3E%3Cpath d='M15 42c10-20 28-21 36-8-12 15-26 15-36 8Z' fill='none' stroke='%231a1a1a' stroke-width='4' stroke-linecap='round'/%3E%3Cpath d='M15 49h34' stroke='%2373b348' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="stage" aria-live="polite">
+      <section class="view home-view is-active" id="home" data-view="home" aria-labelledby="home-title">
+        <div class="home-stack">
+          <h1 id="home-title"><a href="#home" data-home-link>Yi Meng</a></h1>
+          <nav class="home-nav" aria-label="主导航">
+            <a href="#about" data-section-link="about">about</a>
+            <a href="#works" data-section-link="works">works</a>
+            <a href="#contact" data-section-link="contact">contact</a>
+          </nav>
+        </div>
+        <div class="home-content" aria-live="polite">
+          <article class="content-panel" data-section-panel="about">
+            <div class="about-intro">
+              <p>一个还在成长中的产品设计师</p>
+              <p>会做一点设计，也在学怎么让自己更AI-Native</p>
+              <p>在几家互联网公司实习了一年多，C 端的 App 做过，B 端的 AI 平台也做过</p>
+              <p>喜欢把复杂的东西理清楚，让用户用起来别那么费劲——这是老板说的，我自己觉得还行</p>
+              <p>AI 时代设计师到底该会什么，我还没想明白，目前会点 AE 动效，也尝试了做了AI-Daily的agent</p>
+              <p>喜欢听歌，看电影，家里有一只猫</p>
+              <p>有时有点自信，有时刷到大佬的作品集感觉一切都完蛋了</p>
+              <p>看到别人的个人主页都写得挺好，我也学着写了一点</p>
+              <p>希望能一直做出更高效、更专业、也更有温度的产品</p>
+              <p>谢谢你看到这里 :)</p>
+            </div>
+            <div class="resume-sections">
+              <section class="resume-block" aria-labelledby="education-title">
+                <h2 id="education-title"><span>education</span><img src="./assets/doodles/education-title.png" alt="教育经历" /></h2>
+                <div class="resume-row">
+                  <time>27</time>
+                  <div>
+                    <b>江南大学本硕</b>
+                    <span>设计学</span>
+                  </div>
+                </div>
+              </section>
+              <section class="resume-block" aria-labelledby="internship-title">
+                <h2 id="internship-title"><span>internship</span><img src="./assets/doodles/internship-title.png" alt="实习经历" /></h2>
+                <div class="resume-row">
+                  <time>26.5-26.9</time>
+                  <div>
+                    <b>腾讯</b>
+                    <span>视觉设计</span>
+                  </div>
+                </div>
+                <div class="resume-row">
+                  <time>25.6-26.2</time>
+                  <div>
+                    <b>小红书</b>
+                    <span>体验设计</span>
+                  </div>
+                </div>
+                <div class="resume-row">
+                  <time>25.1-25.2</time>
+                  <div>
+                    <b>美团</b>
+                    <span>体验设计</span>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </article>
+          <article class="content-panel" data-section-panel="works">
+            <div class="works-grid">
+              <a class="work-card" href="#works/sixteen" data-work-link data-work-id="sixteen" style="--work-color: #BAE400">
+                <h2>Sixteen</h2>
+                <p>一个帮助你趣味记录、AI跟练的健身app</p>
+              </a>
+              <a class="work-card" href="#works/plg" data-work-link data-work-id="plg" style="--work-color: #4A70FF">
+                <h2>PLG</h2>
+                <p>从获客到续费到ADP计费转化链路优化</p>
+              </a>
+              <a class="work-card" href="#works/adp-brand" data-work-link data-work-id="adp-brand" style="--work-color: #7CD1F7">
+                <h2>ADP Brand</h2>
+                <p>adp品牌、icon skill视觉升级</p>
+              </a>
+              <a class="work-card" href="#works/paymax" data-work-link data-work-id="paymax" style="--work-color: #219F68">
+                <h2>Paymax</h2>
+                <p>0-1搭建的海外刷掌支付后台</p>
+              </a>
+            </div>
+            <article class="work-detail" data-work-detail aria-hidden="true">
+              <a class="work-back" href="#works" data-work-back>← works</a>
+              <header class="work-detail-head">
+                <h2 data-work-title></h2>
+                <p data-work-desc></p>
+              </header>
+              <div class="work-images" data-work-images></div>
+            </article>
+          </article>
+          <article class="content-panel" data-section-panel="contact">
+            <div class="contact-panel">
+              <h2 class="contact-title"><span class="sr-only">打个招呼</span><img src="./assets/contact/hello-title.png" alt="" /></h2>
+              <p>电话是找我最快的方式——或者也可以通过手机号加我的微信。</p>
+              <a class="phone-link" href="tel:13270183007">
+                <svg class="phone-blob" viewBox="0 0 96 14" preserveAspectRatio="none" aria-hidden="true">
+                  <path d="M3 7C12 1 22 1 31 7C40 13 50 13 59 7C68 1 78 1 93 7" />
+                </svg>
+                <span class="phone-text">132-7018-3007</span>
+              </a>
+            </div>
+          </article>
+        </div>
+        <div class="works-art" aria-hidden="true">
+          <img class="works-lamp" src="./assets/works/lamp.png" alt="" />
+        </div>
+        <div class="contact-art" aria-hidden="true">
+          <img class="contact-toast" src="./assets/contact/toast.png" alt="" />
+        </div>
+        <div class="about-art" aria-hidden="true">
+          <img class="grass-person" src="./assets/doodles/grass-person.png" alt="" />
+          <img class="about-flower flower-large" src="./assets/doodles/flower-2.png" alt="" />
+          <img class="about-flower flower-small flower-top" src="./assets/doodles/flower-1.png" alt="" />
+          <img class="about-flower flower-small flower-bottom" src="./assets/doodles/flower-3.png" alt="" />
+        </div>
+        <div class="home-art">
+          <div class="hello-bubble" tabindex="0" aria-label="你好呀：）">
+            <img class="bubble-shape" src="./assets/doodles/bubble.png" alt="" />
+            <img class="hello-text-img" src="./assets/doodles/hello-text.png" alt="你好呀：）" />
+          </div>
+          <img class="home-cat" src="./assets/doodles/hug-cat.png" alt="手绘抱着猫的人" />
+          <div class="heart-trail heart-trail-a" aria-hidden="true">
+            <img class="heart-pop" src="./assets/doodles/heart.png" alt="" style="--i: 0; --x: 0px; --y: 0px; --s: 0.6" />
+            <img class="heart-pop" src="./assets/doodles/heart.png" alt="" style="--i: 1; --x: 12px; --y: -18px; --s: 0.52" />
+            <img class="heart-pop" src="./assets/doodles/heart.png" alt="" style="--i: 2; --x: 24px; --y: -36px; --s: 0.44" />
+            <img class="heart-pop" src="./assets/doodles/heart.png" alt="" style="--i: 3; --x: 36px; --y: -54px; --s: 0.37" />
+            <img class="heart-pop" src="./assets/doodles/heart.png" alt="" style="--i: 4; --x: 48px; --y: -72px; --s: 0.31" />
+          </div>
+          <div class="heart-trail heart-trail-b" aria-hidden="true">
+            <img class="heart-pop" src="./assets/doodles/heart.png" alt="" style="--i: 0; --x: 0px; --y: 0px; --s: 0.54" />
+            <img class="heart-pop" src="./assets/doodles/heart.png" alt="" style="--i: 1; --x: 11px; --y: -16px; --s: 0.48" />
+            <img class="heart-pop" src="./assets/doodles/heart.png" alt="" style="--i: 2; --x: 22px; --y: -32px; --s: 0.41" />
+            <img class="heart-pop" src="./assets/doodles/heart.png" alt="" style="--i: 3; --x: 33px; --y: -48px; --s: 0.35" />
+            <img class="heart-pop" src="./assets/doodles/heart.png" alt="" style="--i: 4; --x: 44px; --y: -64px; --s: 0.3" />
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
