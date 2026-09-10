@@ -58,6 +58,7 @@ function showWorkDetail(workId = workFromHash()) {
   homeView.classList.toggle("work-detail-mode", Boolean(work));
   workDetail.classList.toggle("is-active", Boolean(work));
   workDetail.setAttribute("aria-hidden", String(!work));
+  workDetail.dataset.workId = work ? workId : "";
 
   if (!work) {
     workImages.replaceChildren();

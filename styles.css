@@ -547,8 +547,33 @@ h1 {
 }
 
 .work-detail {
+  position: relative;
   display: none;
   width: min(920px, 62vw);
+}
+
+.work-detail-doodle {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: clamp(110px, 12vw, 170px);
+  height: auto;
+  pointer-events: none;
+  user-select: none;
+}
+
+.work-detail.is-active[data-work-id="sixteen"] .work-detail-doodle[data-doodle="sixteen"],
+.work-detail.is-active[data-work-id="plg"] .work-detail-doodle[data-doodle="plg"],
+.work-detail.is-active[data-work-id="adp-brand"] .work-detail-doodle[data-doodle="adp-brand"],
+.work-detail.is-active[data-work-id="paymax"] .work-detail-doodle[data-doodle="paymax"] {
+  display: block;
+}
+
+.work-detail.is-active[data-work-id="plg"] .work-detail-doodle[data-doodle="plg"],
+.work-detail.is-active[data-work-id="adp-brand"] .work-detail-doodle[data-doodle="adp-brand"],
+.work-detail.is-active[data-work-id="paymax"] .work-detail-doodle[data-doodle="paymax"] {
+  width: clamp(82px, 9vw, 128px);
 }
 
 .work-detail.is-active {
@@ -575,6 +600,7 @@ h1 {
   color: rgba(26, 26, 26, 0.72);
   font-size: clamp(15px, 1.2vw, 20px);
   font-weight: 650;
+  text-decoration: none;
 }
 
 .work-detail-head {
@@ -692,7 +718,8 @@ h1 {
 }
 
 .contact-panel {
-  padding-top: clamp(12px, 2vh, 22px);
+  margin-top: clamp(-72px, -7vh, -30px);
+  padding-top: 0;
 }
 
 .contact-panel h2 {
