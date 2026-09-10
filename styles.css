@@ -186,8 +186,8 @@ h1 {
 
 .hello-bubble {
   position: absolute;
-  top: clamp(188px, 26vh, 246px);
-  right: clamp(260px, 32vw, 520px);
+  top: clamp(240px, 33vh, 340px);
+  right: clamp(200px, 25vw, 400px);
   width: clamp(173px, 16.7vw, 253px);
   aspect-ratio: 542 / 369;
   cursor: default;
@@ -393,6 +393,21 @@ h1 {
 .about-intro {
   min-height: clamp(500px, 68vh, 610px);
   padding-bottom: clamp(54px, 7.5vh, 96px);
+}
+
+.about-thanks {
+  position: relative;
+  width: fit-content;
+}
+
+.pencil-doodle {
+  position: absolute;
+  left: 100%;
+  bottom: -0.95em;
+  width: clamp(56px, 5.6vw, 88px);
+  height: auto;
+  margin-left: -1.1em;
+  pointer-events: none;
 }
 
 .resume-sections {
@@ -638,7 +653,19 @@ h1 {
   width: 100%;
   height: auto;
   z-index: 2;
-  animation: lamp-glow 4.5s ease-in-out infinite;
+  transform-origin: center 88%;
+  animation: toast-sway 4.2s ease-in-out infinite;
+}
+
+@keyframes toast-sway {
+  0%,
+  100% {
+    transform: rotate(-4.5deg) translateX(-3px);
+  }
+
+  50% {
+    transform: rotate(4.5deg) translateX(3px);
+  }
 }
 
 @keyframes lamp-glow {
@@ -748,6 +775,20 @@ h1 {
 .phone-text {
   position: relative;
   z-index: 1;
+}
+
+.lemon-talk-wrap {
+  display: flex;
+  justify-content: flex-end;
+  max-width: 440px;
+  margin-top: clamp(14px, 2.4vh, 26px);
+}
+
+.lemon-talk {
+  width: clamp(190px, 21vw, 300px);
+  height: auto;
+  pointer-events: none;
+  user-select: none;
 }
 
 .home-cat {
@@ -1333,5 +1374,82 @@ h2 {
   *::after {
     animation-duration: 0.01ms !important;
     transition-duration: 0.01ms !important;
+  }
+}
+
+.hello-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  display: grid;
+  place-items: center;
+  padding: 4vh 5vw;
+  background: #ffffff;
+}
+
+.hello-modal[hidden] {
+  display: none;
+}
+
+.hello-modal-card {
+  position: relative;
+  width: min(720px, 60vw);
+  animation: hello-modal-in 0.34s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.hello-modal-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  user-select: none;
+}
+
+.hello-sparkle {
+  position: absolute;
+  left: 8%;
+  top: 1%;
+  font-size: clamp(30px, 4.4vw, 62px);
+  line-height: 1;
+  pointer-events: none;
+  animation: hello-sparkle-sway 3.8s ease-in-out infinite;
+}
+
+@keyframes hello-sparkle-sway {
+  0%,
+  100% {
+    transform: translateX(-12px) rotate(-10deg);
+  }
+
+  50% {
+    transform: translateX(12px) rotate(10deg);
+  }
+}
+
+.hello-modal-close {
+  position: absolute;
+  top: 6%;
+  right: 4%;
+  width: 11%;
+  aspect-ratio: 1;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.hello-modal-close:focus-visible {
+  outline: 2px dashed #1a1a1a;
+  outline-offset: 4px;
+}
+
+@keyframes hello-modal-in {
+  from {
+    opacity: 0;
+    transform: scale(0.94);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
   }
 }

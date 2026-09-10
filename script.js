@@ -167,3 +167,25 @@ helloBubble.addEventListener("click", () => {
 
   window.setTimeout(() => burst.remove(), 1600);
 });
+
+
+const helloModal = document.querySelector("[data-hello-modal]");
+const helloModalClose = document.querySelector("[data-hello-close]");
+
+if (helloModal) {
+  const closeHelloModal = () => {
+    helloModal.hidden = true;
+  };
+
+  helloBubble.addEventListener("click", () => {
+    helloModal.hidden = false;
+  });
+
+  helloModalClose?.addEventListener("click", closeHelloModal);
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && !helloModal.hidden) {
+      closeHelloModal();
+    }
+  });
+}
