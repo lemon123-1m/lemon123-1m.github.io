@@ -14,7 +14,7 @@ const works = {
   sixteen: {
     title: "Sixteen",
     desc: "一个帮助你趣味记录、AI跟练的健身app",
-    images: imageRange("./assets/projects/sixteen/", 3, 29),
+    images: imageRange("./assets/projects/sixteen/", 3, 30),
     color: "#BAE400",
   },
   plg: {

@@ -582,7 +582,7 @@ h1 {
 
 .work-images {
   display: grid;
-  gap: clamp(12px, 1.8vh, 20px);
+  gap: clamp(4px, 0.6vh, 8px);
   width: min(920px, 62vw);
 }
 
@@ -590,7 +590,7 @@ h1 {
   display: block;
   width: 100%;
   height: auto;
-  border-radius: 6px;
+  border-radius: 0;
   background: transparent;
 }
 
