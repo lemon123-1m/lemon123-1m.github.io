@@ -186,8 +186,8 @@ h1 {
 
 .hello-bubble {
   position: absolute;
-  top: clamp(240px, 33vh, 340px);
-  right: clamp(200px, 25vw, 400px);
+  right: 62%;
+  bottom: calc(100% + 15%);
   width: clamp(173px, 16.7vw, 253px);
   aspect-ratio: 542 / 369;
   cursor: default;
@@ -825,12 +825,17 @@ h1 {
   user-select: none;
 }
 
-.home-cat {
+.cat-scene {
   position: absolute;
   right: clamp(58px, 10vw, 170px);
   bottom: clamp(30px, 6vh, 76px);
   width: min(27.2vw, 344px);
   max-width: 36.8vh;
+}
+
+.home-cat {
+  display: block;
+  width: 100%;
   height: auto;
   pointer-events: none;
   user-select: none;
@@ -1155,8 +1160,6 @@ h2 {
   }
 
   .hello-bubble {
-    top: clamp(432px, 52vh, 462px);
-    right: clamp(28px, 8vw, 44px);
     width: min(31.3vw, 120px);
   }
 
@@ -1285,7 +1288,7 @@ h2 {
     font-size: clamp(12px, 3.3vw, 16px);
   }
 
-  .home-cat {
+  .cat-scene {
     right: clamp(18px, 7vw, 34px);
     bottom: clamp(22px, 5vh, 42px);
     width: min(46.4vw, 208px);
