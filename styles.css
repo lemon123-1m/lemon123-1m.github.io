@@ -412,7 +412,7 @@ h1 {
 
 .resume-sections {
   display: grid;
-  gap: clamp(46px, 6vh, 66px);
+  gap: clamp(24px, 3.2vh, 38px);
   width: min(760px, 48vw);
   padding-top: 0;
 }
@@ -1439,6 +1439,39 @@ h2 {
   width: 100%;
   height: auto;
   user-select: none;
+}
+
+.polaroid {
+  position: absolute;
+  left: 8%;
+  top: 15%;
+  width: 30%;
+  aspect-ratio: 326 / 486;
+  border: 0;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+  transition: transform 0.24s ease;
+}
+
+.polaroid:hover {
+  transform: scale(1.02);
+}
+
+.polaroid:focus-visible {
+  outline: 2px dashed #1a1a1a;
+  outline-offset: 4px;
+}
+
+.polaroid-card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  user-select: none;
+  -webkit-user-drag: none;
+  will-change: transform, opacity;
 }
 
 .hello-sparkle {
