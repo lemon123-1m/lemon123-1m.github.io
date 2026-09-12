@@ -112,6 +112,11 @@ a {
   background-color: #219F68;
 }
 
+.home-view.section-works:has(.work-card[data-work-id="more"]:hover),
+.home-view.section-works:has(.work-card[data-work-id="more"]:focus-visible) {
+  background-color: #FFC33D;
+}
+
 .home-stack {
   position: sticky;
   top: 0;
@@ -475,9 +480,17 @@ h1 {
 
 .works-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(140px, 1fr));
-  gap: clamp(38px, 6.7vh, 58px) clamp(52px, 6vw, 88px);
-  width: min(435px, 30vw);
+  grid-template-columns: repeat(6, minmax(60px, 1fr));
+  gap: clamp(38px, 6.7vh, 58px) clamp(28px, 3vw, 44px);
+  width: min(660px, 46vw);
+}
+
+.work-card:nth-child(-n + 2) {
+  grid-column: span 3;
+}
+
+.work-card:nth-child(n + 3) {
+  grid-column: span 2;
 }
 
 .works-art {

@@ -35,6 +35,12 @@ const works = {
     images: imageRange("./assets/projects/paymax/", 50, 58),
     color: "#219F68",
   },
+  more: {
+    title: "More.",
+    desc: "ai相关的内容和零零碎碎",
+    images: imageRange("./assets/projects/more/", 60, 65),
+    color: "#FFC33D",
+  },
 };
 
 function imageRange(dir, from, to) {
@@ -183,6 +189,12 @@ if (helloModal) {
   });
 
   helloModalClose?.addEventListener("click", closeHelloModal);
+
+  helloModal.addEventListener("click", (event) => {
+    if (event.target === helloModal) {
+      closeHelloModal();
+    }
+  });
 
   document.addEventListener("keydown", (event) => {
     if (event.key === "Escape" && !helloModal.hidden) {
