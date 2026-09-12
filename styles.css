@@ -593,9 +593,14 @@ h1 {
   display: block;
 }
 
+.work-detail.is-active[data-work-id="more"] .work-detail-doodle[data-doodle="more"] {
+  display: block;
+}
+
 .work-detail.is-active[data-work-id="plg"] .work-detail-doodle[data-doodle="plg"],
 .work-detail.is-active[data-work-id="adp-brand"] .work-detail-doodle[data-doodle="adp-brand"],
-.work-detail.is-active[data-work-id="paymax"] .work-detail-doodle[data-doodle="paymax"] {
+.work-detail.is-active[data-work-id="paymax"] .work-detail-doodle[data-doodle="paymax"],
+.work-detail.is-active[data-work-id="more"] .work-detail-doodle[data-doodle="more"] {
   width: clamp(82px, 9vw, 128px);
 }
 
