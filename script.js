@@ -38,8 +38,8 @@ const works = {
   more: {
     title: "More.",
     desc: "ai相关的内容和零零碎碎",
-    images: imageRange("./assets/projects/more/", 60, 65),
-    color: "#FFC33D",
+    images: imageRange("./assets/projects/more/", 60, 66),
+    color: "#111111",
   },
 };
 
@@ -62,6 +62,7 @@ function workFromHash() {
 function showWorkDetail(workId = workFromHash()) {
   const work = works[workId];
   homeView.classList.toggle("work-detail-mode", Boolean(work));
+  homeView.classList.toggle("work-dark", Boolean(work) && workId === "more");
   workDetail.classList.toggle("is-active", Boolean(work));
   workDetail.setAttribute("aria-hidden", String(!work));
   workDetail.dataset.workId = work ? workId : "";
