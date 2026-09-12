@@ -114,7 +114,17 @@ a {
 
 .home-view.section-works:has(.work-card[data-work-id="more"]:hover),
 .home-view.section-works:has(.work-card[data-work-id="more"]:focus-visible) {
-  background-color: #FFC33D;
+  background-color: #111111;
+}
+
+.home-view.section-works:has(.work-card[data-work-id="more"]:hover) :is(h1, .work-card h2, .work-card p, .home-nav a),
+.home-view.section-works:has(.work-card[data-work-id="more"]:focus-visible) :is(h1, .work-card h2, .work-card p, .home-nav a) {
+  color: #ffffff;
+}
+
+.home-view.section-works:has(.work-card[data-work-id="more"]:hover) .works-lamp,
+.home-view.section-works:has(.work-card[data-work-id="more"]:focus-visible) .works-lamp {
+  filter: brightness(0) invert(1);
 }
 
 .home-stack {
@@ -667,6 +677,10 @@ h1 {
 
 .home-view.work-detail-mode .works-grid {
   display: none;
+}
+
+.home-view.work-dark :is(h1, .home-nav a, .work-back, .work-detail h2, .work-detail p) {
+  color: #ffffff;
 }
 
 .contact-art {
