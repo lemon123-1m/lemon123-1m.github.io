@@ -14,7 +14,7 @@ const works = {
   sixteen: {
     title: "Sixteen",
     desc: "一个帮助你趣味记录、AI跟练的健身app",
-    images: imageRange("./assets/projects/sixteen/", 3, 29),
+    images: imageRange("./assets/projects/sixteen/", 3, 30),
     color: "#BAE400",
   },
   plg: {
@@ -34,6 +34,12 @@ const works = {
     desc: "0-1搭建的海外刷掌支付后台",
     images: imageRange("./assets/projects/paymax/", 50, 58),
     color: "#219F68",
+  },
+  more: {
+    title: "More.",
+    desc: "ai相关的内容和零零碎碎",
+    images: imageRange("./assets/projects/more/", 60, 65),
+    color: "#FFC33D",
   },
 };
 
@@ -184,9 +190,75 @@ if (helloModal) {
 
   helloModalClose?.addEventListener("click", closeHelloModal);
 
+  helloModal.addEventListener("click", (event) => {
+    if (event.target === helloModal) {
+      closeHelloModal();
+    }
+  });
+
   document.addEventListener("keydown", (event) => {
     if (event.key === "Escape" && !helloModal.hidden) {
       closeHelloModal();
     }
+  });
+}
+
+
+const polaroid = document.querySelector("[data-polaroid]");
+const polaroidCards = Array.from(document.querySelectorAll("[data-polaroid-card]"));
+const POLAROID_PHOTOS = [
+  "./assets/contact/photo-1.png",
+  "./assets/contact/photo-2.png",
+  "./assets/contact/photo-3.png",
+  "./assets/contact/photo-4.png",
+];
+let polaroidIndex = 0;
+let polaroidBusy = false;
+
+if (polaroid && polaroidCards.length === 2) {
+  const CARD_OUT = "transform 0.6s cubic-bezier(0.32, 0.72, 0.28, 1), opacity 0.55s ease";
+  const CARD_IN = "transform 0.62s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.44s ease";
+  const CARD_AWAY = "translateX(56%) rotate(7deg) scale(0.95)";
+
+  let frontIndex = 0;
+
+  polaroidCards[0].style.zIndex = "2";
+  polaroidCards[1].style.zIndex = "1";
+  polaroidCards[1].style.opacity = "0";
+
+  polaroid.addEventListener("click", () => {
+    if (polaroidBusy) return;
+    polaroidBusy = true;
+
+    const front = polaroidCards[frontIndex];
+    const next = polaroidCards[1 - frontIndex];
+
+    polaroidIndex = (polaroidIndex + 1) % POLAROID_PHOTOS.length;
+    next.src = POLAROID_PHOTOS[polaroidIndex];
+
+    next.style.transition = "none";
+    next.style.transform = CARD_AWAY;
+    next.style.opacity = "0";
+    next.style.zIndex = "3";
+    front.style.zIndex = "2";
+
+    requestAnimationFrame(() => {
+      next.style.transition = CARD_IN;
+      next.style.transform = "translateX(0) rotate(0deg) scale(1)";
+      next.style.opacity = "1";
+
+      front.style.transition = CARD_OUT;
+      front.style.transform = "translateX(-122%) rotate(-11deg) scale(0.93)";
+      front.style.opacity = "0";
+    });
+
+    window.setTimeout(() => {
+      front.style.transition = "none";
+      front.style.transform = CARD_AWAY;
+      front.style.opacity = "0";
+      front.style.zIndex = "1";
+      frontIndex = 1 - frontIndex;
+      polaroidBusy = false;
+    }, 620);
   });
 }

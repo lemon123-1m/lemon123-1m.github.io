@@ -112,6 +112,11 @@ a {
   background-color: #219F68;
 }
 
+.home-view.section-works:has(.work-card[data-work-id="more"]:hover),
+.home-view.section-works:has(.work-card[data-work-id="more"]:focus-visible) {
+  background-color: #FFC33D;
+}
+
 .home-stack {
   position: sticky;
   top: 0;
@@ -186,8 +191,8 @@ h1 {
 
 .hello-bubble {
   position: absolute;
-  top: clamp(240px, 33vh, 340px);
-  right: clamp(200px, 25vw, 400px);
+  right: 62%;
+  bottom: calc(100% + 15%);
   width: clamp(173px, 16.7vw, 253px);
   aspect-ratio: 542 / 369;
   cursor: default;
@@ -412,7 +417,7 @@ h1 {
 
 .resume-sections {
   display: grid;
-  gap: clamp(46px, 6vh, 66px);
+  gap: clamp(24px, 3.2vh, 38px);
   width: min(760px, 48vw);
   padding-top: 0;
 }
@@ -475,9 +480,17 @@ h1 {
 
 .works-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(140px, 1fr));
-  gap: clamp(38px, 6.7vh, 58px) clamp(52px, 6vw, 88px);
-  width: min(435px, 30vw);
+  grid-template-columns: repeat(6, minmax(60px, 1fr));
+  gap: clamp(38px, 6.7vh, 58px) clamp(28px, 3vw, 44px);
+  width: min(660px, 46vw);
+}
+
+.work-card:nth-child(-n + 2) {
+  grid-column: span 3;
+}
+
+.work-card:nth-child(n + 3) {
+  grid-column: span 2;
 }
 
 .works-art {
@@ -582,7 +595,7 @@ h1 {
 
 .work-images {
   display: grid;
-  gap: clamp(12px, 1.8vh, 20px);
+  gap: clamp(4px, 0.6vh, 8px);
   width: min(920px, 62vw);
 }
 
@@ -590,7 +603,7 @@ h1 {
   display: block;
   width: 100%;
   height: auto;
-  border-radius: 6px;
+  border-radius: 0;
   background: transparent;
 }
 
@@ -825,12 +838,17 @@ h1 {
   user-select: none;
 }
 
-.home-cat {
+.cat-scene {
   position: absolute;
   right: clamp(58px, 10vw, 170px);
   bottom: clamp(30px, 6vh, 76px);
   width: min(27.2vw, 344px);
   max-width: 36.8vh;
+}
+
+.home-cat {
+  display: block;
+  width: 100%;
   height: auto;
   pointer-events: none;
   user-select: none;
@@ -1155,8 +1173,6 @@ h2 {
   }
 
   .hello-bubble {
-    top: clamp(432px, 52vh, 462px);
-    right: clamp(28px, 8vw, 44px);
     width: min(31.3vw, 120px);
   }
 
@@ -1285,7 +1301,7 @@ h2 {
     font-size: clamp(12px, 3.3vw, 16px);
   }
 
-  .home-cat {
+  .cat-scene {
     right: clamp(18px, 7vw, 34px);
     bottom: clamp(22px, 5vh, 42px);
     width: min(46.4vw, 208px);
@@ -1436,6 +1452,39 @@ h2 {
   width: 100%;
   height: auto;
   user-select: none;
+}
+
+.polaroid {
+  position: absolute;
+  left: 8%;
+  top: 15%;
+  width: 30%;
+  aspect-ratio: 326 / 486;
+  border: 0;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+  transition: transform 0.24s ease;
+}
+
+.polaroid:hover {
+  transform: scale(1.02);
+}
+
+.polaroid:focus-visible {
+  outline: 2px dashed #1a1a1a;
+  outline-offset: 4px;
+}
+
+.polaroid-card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  user-select: none;
+  -webkit-user-drag: none;
+  will-change: transform, opacity;
 }
 
 .hello-sparkle {
