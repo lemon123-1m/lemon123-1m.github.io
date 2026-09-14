@@ -23,6 +23,12 @@ const works = {
     images: imageRange("./assets/projects/plg/", 30, 41),
     color: "#4A70FF",
   },
+  collections: {
+    title: "Collections",
+    desc: "将碎片化收藏变成结构化、可交互知识库",
+    images: imageRange("./assets/projects/collections/", 30, 38),
+    color: "#FA869D",
+  },
   "adp-brand": {
     title: "ADP Brand",
     desc: "adp品牌、icon skill视觉升级",
