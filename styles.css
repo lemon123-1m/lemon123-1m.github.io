@@ -742,23 +742,33 @@ h1 {
 @keyframes lamp-glow {
   0%,
   100% {
-    opacity: 0.72;
+    opacity: 0.3;
+    transform: scale(0.95);
   }
 
-  22% {
+  18% {
     opacity: 1;
+    transform: scale(1.07);
   }
 
-  45% {
-    opacity: 0.6;
+  34% {
+    opacity: 0.42;
+    transform: scale(0.97);
   }
 
-  62% {
-    opacity: 0.94;
+  52% {
+    opacity: 0.96;
+    transform: scale(1.05);
   }
 
-  80% {
-    opacity: 0.66;
+  70% {
+    opacity: 0.36;
+    transform: scale(0.96);
+  }
+
+  86% {
+    opacity: 0.88;
+    transform: scale(1.03);
   }
 }
 
