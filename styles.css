@@ -102,11 +102,6 @@ a {
   background-color: #4A70FF;
 }
 
-.home-view.section-works:has(.work-card[data-work-id="collections"]:hover),
-.home-view.section-works:has(.work-card[data-work-id="collections"]:focus-visible) {
-  background-color: #FA869D;
-}
-
 .home-view.section-works:has(.work-card[data-work-id="adp-brand"]:hover),
 .home-view.section-works:has(.work-card[data-work-id="adp-brand"]:focus-visible) {
   background-color: #7CD1F7;
@@ -598,15 +593,10 @@ h1 {
   display: block;
 }
 
-.work-detail.is-active[data-work-id="collections"] .work-detail-doodle[data-doodle="collections"] {
-  display: block;
-}
-
 .work-detail.is-active[data-work-id="plg"] .work-detail-doodle[data-doodle="plg"],
 .work-detail.is-active[data-work-id="adp-brand"] .work-detail-doodle[data-doodle="adp-brand"],
 .work-detail.is-active[data-work-id="paymax"] .work-detail-doodle[data-doodle="paymax"],
-.work-detail.is-active[data-work-id="more"] .work-detail-doodle[data-doodle="more"],
-.work-detail.is-active[data-work-id="collections"] .work-detail-doodle[data-doodle="collections"] {
+.work-detail.is-active[data-work-id="more"] .work-detail-doodle[data-doodle="more"] {
   width: clamp(82px, 9vw, 128px);
 }
 
