@@ -38,7 +38,7 @@ const works = {
   more: {
     title: "More.",
     desc: "AI 相关的内容和7788",
-    images: imageRange("./assets/projects/more/", 60, 66),
+    images: imageRange("./assets/projects/more/", 50, 66),
     color: "#111111",
   },
 };
