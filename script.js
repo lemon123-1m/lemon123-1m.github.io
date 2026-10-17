@@ -14,13 +14,13 @@ const works = {
   sixteen: {
     title: "Sixteen",
     desc: "一个帮助你趣味记录、AI跟练的健身app",
-    images: imageRange("./assets/projects/sixteen/", 3, 30),
+    images: imageRange("./assets/projects/sixteen/", 3, 31),
     color: "#BAE400",
   },
   plg: {
     title: "PLG",
     desc: "从获客到续费到ADP计费转化链路优化",
-    images: imageRange("./assets/projects/plg/", 30, 41),
+    images: imageRange("./assets/projects/plg/", 30, 40),
     color: "#4A70FF",
   },
   "adp-brand": {
