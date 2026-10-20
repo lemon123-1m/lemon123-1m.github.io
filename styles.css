@@ -546,6 +546,8 @@ h1 {
   font-size: clamp(19px, 1.86vw, 28px);
   font-weight: 400;
   line-height: 1;
+  transform-origin: left center;
+  transition: transform 0.25s ease, opacity 0.25s ease;
 }
 
 .work-card p {
@@ -556,13 +558,21 @@ h1 {
   font-weight: 400;
   line-height: 1.35;
   letter-spacing: 0.06em;
-  transition: color 0.2s ease, font-weight 0.2s ease;
+  transform-origin: left center;
+  transition: color 0.2s ease, font-weight 0.2s ease, transform 0.25s ease, opacity 0.25s ease;
 }
 
 .work-card:hover p,
 .work-card:focus-visible p {
   color: var(--ink);
   font-weight: 700;
+}
+
+/* 悬停/聚焦某个项目时，其余项目文字缩小至 90% 并降低不透明度至 70% */
+.home-view.section-works:has(.work-card:is(:hover, :focus-visible))
+  .work-card:not(:hover):not(:focus-visible) :is(h2, p) {
+  opacity: 0.7;
+  transform: scale(0.9);
 }
 
 .work-detail {
